@@ -162,17 +162,27 @@ function fiddlehead_slideshow_item_views_default_views() {
     'image_style' => 'slideshow_image',
     'image_link' => '',
   );
+  /* Field: Content: URL */
+  $handler->display->display_options['fields']['field_slideshow_url']['id'] = 'field_slideshow_url';
+  $handler->display->display_options['fields']['field_slideshow_url']['table'] = 'field_data_field_slideshow_url';
+  $handler->display->display_options['fields']['field_slideshow_url']['field'] = 'field_slideshow_url';
+  $handler->display->display_options['fields']['field_slideshow_url']['label'] = '';
+  $handler->display->display_options['fields']['field_slideshow_url']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_slideshow_url']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_slideshow_url']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_slideshow_url']['type'] = 'link_plain';
   /* Field: Carousel Markup */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Carousel Markup';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '[field_slide_image]
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<a href="[field_slideshow_url]">[field_slide_image]
 <div class="carousel-caption">
   <h4>[title]</h4>
   [body]
-</div>';
+</div>
+</a>';
   $handler->display->display_options['fields']['nothing']['element_type'] = '0';
   $handler->display->display_options['fields']['nothing']['element_label_type'] = '0';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
