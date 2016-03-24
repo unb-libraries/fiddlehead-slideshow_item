@@ -26,5 +26,5 @@
   <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
 <script>
-jQuery('#myCarousel').carousel();
+jQuery('#myCarousel').carousel({interval:8000});
 </script>
